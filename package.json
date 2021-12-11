@@ -1,20 +1,23 @@
 {
   "name": "E-com",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "private": "true",
   "scripts": {
-    "start": "node ./server/index.js"
+    "dev": "concurrently --kill-others-on-fail \"yarn api:dev\" \"yarn fe:dev\"",
+    "fe:dev": "yarn workspace client start",
+    "api:dev": "yarn workspace server start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ravimaurya1/E-com.git"
+  "repository": "https://github.com/ravimaurya1/E-com.git",
+  "author": "Ravi Maurya <ravi.maurya@quikr.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "./*"
+    ],
+    "nohoist": []
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ravimaurya1/E-com/issues"
-  },
-  "homepage": "https://github.com/ravimaurya1/E-com#readme"
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
 }
