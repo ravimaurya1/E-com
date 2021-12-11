@@ -1,0 +1,20 @@
+{
+  "name": "E-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravimaurya1/E-com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravimaurya1/E-com/issues"
+  },
+  "homepage": "https://github.com/ravimaurya1/E-com#readme"
+}
